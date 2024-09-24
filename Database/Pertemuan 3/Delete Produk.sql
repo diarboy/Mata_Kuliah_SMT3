@@ -1,0 +1,1 @@
+DELETE FROM produk WHERE id_produk = 6230007;

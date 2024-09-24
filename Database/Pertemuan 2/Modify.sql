@@ -1,0 +1,1 @@
+ALTER TABLE mahasiswa MODIFY email CHAR;
