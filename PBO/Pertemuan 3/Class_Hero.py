@@ -37,20 +37,20 @@ print("listhero: ", Hero.listhero)
 
 def battle(hero1, hero2):
     turn = 1
-    while H1.healthpoint > 0 and H3.healthpoint > 0:
+    while hero1.healthpoint > 0 and hero2.healthpoint > 0:
         print(f"\n--- Babak {turn} ---")
         
         if turn % 2 != 0:
-            H1.launch_atk(H2)
+            hero1.launch_atk(hero2)
         else:
-            H2.launch_atk(H1)
+            hero2.launch_atk(hero1)
         
         turn += 1
 
-    if H1.healthpoint > 0:
-        print(f"\nPemenangnya adalah {H1.namahero}!")
+    if hero1.healthpoint > 0:
+        print(f"\nPemenangnya adalah {hero1.namahero}!")
     else:
-        print(f"\nPemenangnya adalah {H2.namahero}!")
+        print(f"\nPemenangnya adalah {hero2.namahero}!")
 
     print("\n=== Show Stats ===")
     print(H1.status())
