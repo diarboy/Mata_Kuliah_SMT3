@@ -1,0 +1,20 @@
+.header-top{
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 5px 5px;
+    background-color: #08c;
+    font-family:'Open Sans';
+    display: flex;
+    }
+    li {
+        display: block;
+        color:white;
+    }
+
+    li a {
+        display:block;
+        color:#fff;
+        padding: 4px 4px;
+        text-decoration: none;
+    }
