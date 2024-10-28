@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <div class="logo"><a href="home.html"> Sempaner Consultant</a></div>
+    <nav>
+        <ul>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="form.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h2>Formulir Permohonan</h2>
+        
+        <form method="get">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" />
+            </div>
+            <div class="form-group">
+                <label for="email">e-mail</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" />
+            </div>
+            <div class="form-group">
+                <label for="nohp">No. Handphone</label>
+                <input type="text" id="nohp" name="nohp" placeholder="Masukkan nomor HP Anda" pattern="\d{4}-\d{4}-\d{5}" maxlength="13" title="Contoh: 0857-1234-56789" required/>
+            </div>
+            
+            <div class="form-group">
+                <label for="lahir">Tanggal Lahir</label>
+                <input type="date" id="lahir" name="lahir" />
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="pria" name="jkel" value="Pria" />
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jkel" value="Wanita" />
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="status1" name="status1" value="Perorangan" />
+                    <label for="status1">Perorangan</label>
+                    <input type="checkbox" id="status2" name="status2" value="Badan Usaha" />
+                    <label for="status2">Badan Usaha</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="files">Upload Dokumen Persyaratan</label>
+                <input type="file" id="files" name="files" multiple />
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>📧 <a href="mailto:ardibukan77@gmail.com" target="_blank">ardibukan@live.com</a> 
+            ☎️ <a href="https://wa.me/6285321407111" target="_blank">0231 200400</a> 
+            📍<a href="https://maps.app.goo.gl/T7SqkYofSSNvmgzj6" target="_blank">Jl. Terusan Sekar Kemuning, Kesambi, Cirebon</a> 
+            | ©️2024 Sempaner Consultant | 
+        </p>
+    </footer>
+</main>
+</html>
