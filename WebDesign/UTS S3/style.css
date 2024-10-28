@@ -125,7 +125,7 @@ body {
 .about {
     max-width: 800px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 60px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -134,18 +134,18 @@ body {
 
 .about h1 {
     font-size: 2em;
-    color: #333;
+    color: #8B5A2B;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 2px solid #d39504;
     padding-bottom: 10px;
 }
 
 .about h2 {
     font-size: 1.5em;
-    color: #4CAF50;
+    color: #d39504;
     margin-top: 20px;
-    border-left: 5px solid #4CAF50;
+    border-left: 5px solid #d39504;
     padding-left: 10px;
 }
 
