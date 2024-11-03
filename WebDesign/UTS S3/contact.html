@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <title>Company Profile - Contact</title>
 </head>
 <body>
@@ -21,7 +25,7 @@
     <main>
         <section class="contact">
             <h1>Formulir Permohonan</h1>
-            <form method="get">
+            <form id="contactForm" method="get">
                 <div class="form-group">
                     <label for="name">Nama</label>
                     <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
@@ -32,11 +36,12 @@
                 </div>
                 <div class="form-group">
                     <label for="nohp">No. Handphone</label>
-                    <input type="text" id="nohp" name="nohp" placeholder="Masukkan nomor HP Anda" pattern="\d{4}-\d{4}-\d{5}" maxlength="13" title="Contoh: 0857-1234-56789" required />
+                    <input type="text" id="nohp" name="nohp" placeholder="Masukkan nomor HP Anda" pattern="\d{4}\d{4}\d{4}" maxlength="13" title="Contoh: 0857-1234-56789" required />
                 </div>
                 <div class="form-group">
                     <label for="lahir">Tanggal Lahir</label>
-                    <input type="date" id="lahir" name="lahir" />
+                    <input type="text" id="lahir" name="lahir" placeholder="dd/mm/yyyy" required />
+                    <!-- <input type="date" id="lahir" name="lahir" placeholder="dd/mm/yyyy" required/> untuk type="date" -->
                 </div>
                 <div class="form-group">
                     <label>Gender</label>
@@ -64,9 +69,11 @@
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                 </div>
+                <div id="formFeedback" class="success"></div>
             </form>
         </section>
     </main>
+    <script src="script.js"></script>
 
     <footer>
         <p>📧 <a href="mailto:ardibukan77@gmail.com" target="_blank">ardibukan@live.com</a> 
