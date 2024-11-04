@@ -12,7 +12,9 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html">Sempaner Karya Gemilang</a></div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Sempaner">
+            <a href="index.html">Sempaner Karya Gemilang</a></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -41,12 +43,12 @@
                 <div class="form-group">
                     <label for="lahir">Tanggal Lahir</label>
                     <input type="text" id="lahir" name="lahir" placeholder="dd/mm/yyyy" required />
-                    <!-- <input type="date" id="lahir" name="lahir" placeholder="dd/mm/yyyy" required/> untuk type="date" -->
+                    <!-- <input type="date" id="lahir" name="lahir" placeholder="mm/dd/yyyy" required/> jika type="date" -->
                 </div>
                 <div class="form-group">
                     <label>Gender</label>
                     <div class="radio-group">
-                        <input type="radio" id="pria" name="jkel" value="Pria" required />
+                        <input type="radio" id="pria" name="jkel" value="Pria" />
                         <label for="pria">Pria</label>
                         <input type="radio" id="wanita" name="jkel" value="Wanita" />
                         <label for="wanita">Wanita</label>
@@ -62,8 +64,24 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label>Permohonan dilakukan oleh:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="sendiri" name="pelaku" value="Diri Sendiri" />
+                        <label for="oleh1">Diri Sendiri</label>
+                        <input type="radio" id="kuasa" name="pelaku" value="Selaku Kuasa" />
+                        <label for="oleh2">Selaku Kuasa</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div id="uploadSuratKuasa" style="display: none; margin-top: 10px;">
+                        <label for="suratKuasa">Upload Surat Kuasa:</label>
+                        <input type="file" id="suratKuasa" name="suratKuasa" accept=".pdf,.jpg,.jpeg,.png"/>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="files">Upload Dokumen Persyaratan</label>
-                    <input type="file" id="files" name="files" multiple />
+                    <input type="file" id="files" name="files" accept=".pdf, .jpg, .jpeg, .png" required />
+                    <div id="fileFeedback"></div>
                 </div>
                 <div class="form-group">
                     <button type="submit">Submit</button>

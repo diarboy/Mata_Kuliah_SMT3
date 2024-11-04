@@ -48,7 +48,7 @@ header {
 header .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
 }
 
 header nav ul {
@@ -74,6 +74,7 @@ header nav ul li a:hover {
     background: linear-gradient(to right, #D7CCC8, #1c86e6);
     color: #fff;
     padding: 0px 0;
+    padding-bottom: 30px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -149,11 +150,11 @@ header nav ul li a:hover {
     background-color: #25d366;
     color: #fff;
     font-size: 1.1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     font-weight: bold;
     transition: 0.3s ease;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 20px;    
 }
 
 .cta-button:hover {
@@ -226,9 +227,10 @@ header nav ul li a:hover {
 }
 
 .paket-item .cta-button {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 1rem;
     background-color: #1E90FF;
+    margin-bottom: 15px;
 }
 
 /* About */
@@ -400,6 +402,7 @@ button[type="reset"]:hover {
 /* Footer */
 footer {
     background-color: #333;
+    background: linear-gradient(to right, #D7CCC8, #1c86e6);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -410,6 +413,10 @@ footer {
 footer a {
     color: #1E90FF;
     font-weight: bold;
+}
+
+footer a:hover {
+    color: #145672;
 }
 
 footer p {
@@ -423,6 +430,15 @@ footer p {
     border: 1px solid green;
     background-color: #e0f8e0;
     color: green;
+    border-radius: 5px;
+}
+
+.fileFeedback {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #e0f8e0;
+    color: red;
     border-radius: 5px;
 }
 
