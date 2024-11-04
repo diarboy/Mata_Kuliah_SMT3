@@ -30,7 +30,7 @@
             <form id="contactForm" method="get">
                 <div class="form-group">
                     <label for="name">Nama</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" title="Masukkan nama sesuai KTP" required />
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
@@ -76,11 +76,13 @@
                     <div id="uploadSuratKuasa" style="display: none; margin-top: 10px;">
                         <label for="suratKuasa">Upload Surat Kuasa:</label>
                         <input type="file" id="suratKuasa" name="suratKuasa" accept=".pdf,.jpg,.jpeg,.png"/>
+                        <small>*Maksimal Ukuran 2MB (Format: pdf, jpg, jpeg, png)</small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="files">Upload Dokumen Persyaratan</label>
                     <input type="file" id="files" name="files" accept=".pdf, .jpg, .jpeg, .png" required />
+                    <small>* Maksimal Ukuran 2MB (Format: pdf, jpg, jpeg, png)</small>
                     <div id="fileFeedback"></div>
                 </div>
                 <div class="form-group">
