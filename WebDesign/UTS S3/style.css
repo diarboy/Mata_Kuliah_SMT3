@@ -388,6 +388,10 @@ button[type="reset"]:hover {
     background-color: #333;
 }
 
+#error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+}
 .success {
     margin-top: 15px;
     padding: 10px;

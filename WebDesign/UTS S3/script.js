@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    flatpickr("#lahir", {
-        dateFormat: "d/m/Y", 
-        allowInput: true,
-    });
 
     const form = document.querySelector('form');
     const feedback = document.getElementById("formFeedback");
     const fileInput = document.getElementById('files');
     const fileFeedback = document.getElementById('fileFeedback');
-    const maxFileSize = 2 * 1024 * 1024; 
+    const maxFileSize = 2 * 1024 * 1024;
+    const statusRadios = document.querySelectorAll('input[name="pelaku"]');
+    const uploadSuratKuasa = document.getElementById('uploadSuratKuasa');
+
+    flatpickr("#lahir", {
+        dateFormat: "d/m/Y",
+        allowInput: true,
+    });
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -36,30 +39,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
         feedback.textContent = 'Formulir berhasil dikirim!';
         feedback.style.display = 'block';
+        form.reset();
 
         setTimeout(() => {
             feedback.style.display = 'none';
         }, 10000);
     });
-});
-
-    const statusRadios = document.querySelectorAll('input[name="pelaku"]');
-    const uploadSuratKuasa = document.getElementById('uploadSuratKuasa');
 
     statusRadios.forEach(radio => {
         radio.addEventListener('change', function () {
             if (this.value === 'Selaku Kuasa') {
                 uploadSuratKuasa.style.display = 'block';
             } else {
-                uploadSuratKuasa.style.display = 'none'; 
+                uploadSuratKuasa.style.display = 'none';
             }
         });
     });
 
     fileInput.addEventListener('change', function () {
-        const fileFeedback = document.getElementById('fileFeedback');
-        fileFeedback.style.display = 'none'; 
-        const file = fileInput.files[0]; 
+        const file = fileInput.files[0];
+        fileFeedback.style.display = 'none';
+        fileFeedback.classList.remove('error', 'success');
 
         if (file && file.size > maxFileSize) {
             fileFeedback.textContent = 'Ukuran file tidak boleh lebih dari 2 MB.';
@@ -67,3 +67,4 @@ document.addEventListener('DOMContentLoaded', function () {
             fileInput.value = '';
         }
     });
+});
