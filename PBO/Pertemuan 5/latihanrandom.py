@@ -1,6 +1,7 @@
 import random
 
 # Membuat daftar mahasiswa (misalnya mahasiswa 1 sampai 100)
+# Jika menggunakan daftar fiktif, nama mahasiswa tidak perlu dideklarasi lagi
 # mahasiswa = [f"Mahasiswa {i+1}" for i in range(100)]
 
 mahasiswa = [
@@ -30,11 +31,11 @@ kelompok = {f"Kelompok {i+1}": mahasiswa[i::jumlah_kelompok] for i in range(juml
 kelompok_topik = {f"Kelompok {i+1}": topik[i] for i in range(jumlah_kelompok)}
 
 # Menampilkan hasil pembagian kelompok
-for k, v in kelompok.items():
-    print(k, v)
+# for k, v in kelompok.items():
+#     print(k, v)
     
-# # Menampilkan hasil pembagian kelompok dan topik
-# for k in kelompok:
-#     print(f"{k} : {kelompok[k]}")
-#     print(f"Topik yang diberikan : {kelompok_topik[k]}")
-#     print()  # Baris kosong untuk pemisah antar kelompok
+# Menampilkan hasil pembagian kelompok dan topik
+for k in kelompok:
+    print(f"{k} : {kelompok[k]}")
+    print(f"Topik yang diberikan : {kelompok_topik[k]}")
+    print()  # Baris kosong untuk pemisah antar kelompok
