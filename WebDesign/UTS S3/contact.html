@@ -7,22 +7,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <title>Company Profile - Contact</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Sempaner">
-            <a href="index.html">Sempaner Consultant</a></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <body id="home" class="d-flex flex-column h-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light py-4 bg-nav">
+        <div class="container">
+            <!-- Brand / Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="Logo Sempaner" width="42" height="42" class="d-inline-block mt--2 me-2">
+                <span class="brand-text fs-4 fw-bolder">Sempaner Consultant</span>
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse py-3 py-lg-1" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link mx-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Social Media -->
+                <div class="d-flex mt-3 ms-3 mt-md-0 ms-md-0">
+                    <a href="https://facebook.com/ardibukan" target="_blank" class="btn btn-social-media me-3">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ardibukan" target="_blank" class="btn btn-social-media me-3">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@allbibek." target="_blank" class="btn btn-social-media me-3">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://github.com/diarboy" target="_blank" class="btn btn-social-media">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section class="contact">
@@ -38,7 +68,7 @@
                 </div>
                 <div class="form-group">
                     <label for="nohp">No. Handphone</label>
-                    <input type="text" id="nohp" name="nohp" placeholder="Masukkan nomor HP Anda" pattern="\d{4}\d{4}\d{4}" maxlength="13" title="Contoh: 0857-1234-56789" required />
+                    <input type="text" inputmode="numeric" id="nohp" name="nohp" placeholder="Masukkan nomor HP Anda" pattern="\d{4}\d{4}\d{4}" maxlength="13" title="Contoh: 0857-1234-56789" required />
                 </div>
                 <div class="form-group">
                     <label for="lahir">Tanggal Lahir</label>
@@ -102,5 +132,9 @@
             | &copy; 2024 Sempaner Consultant | 
         </p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>
