@@ -11,4 +11,3 @@ class HelloWorldApp(App):
 if __name__ == '__main__':
     HelloWorldApp().run()
 #Kode hanya akan dijalankan jika file ini dieksekusi
-#dswj

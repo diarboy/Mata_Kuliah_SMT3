@@ -50,5 +50,3 @@ class form(App):
 
 if __name__ == "__main__":
     form().run()
-
-#test 3
